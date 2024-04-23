@@ -27,7 +27,7 @@ const Parallax = ({ type }) => {
       <motion.h1 style={{ y: yText }}>
         {type === "services" ? "What can I do?" : "What did I do?"}
       </motion.h1>
-      <motion.div className="stargate" style={{ x: yBg }}></motion.div>
+      {/* <motion.div className="stargate" style={{ x: yBg }}></motion.div> */}
       <motion.div className="mountains"></motion.div>
       <motion.div
         className="planets"
