@@ -37,6 +37,7 @@
                         color: white;
                         margin-right: 20px;
                         cursor: pointer;
+                        font-weight: 300;
                     }
                 }
 
@@ -44,7 +45,7 @@
                 width: 50px;
                 }
     
-
+            
             }
            
 
@@ -52,14 +53,23 @@
 
 
         .imageContainer{
-        
+
             display: flex;
             flex-direction: row-reverse;
-            height: 90%;
+            height: 99%;
             position: absolute;
             // top: 0;
             bottom: 0;
             right: 10px;    
+        }
+
+        .slidingTextContainer{
+     
+            color: #ffffff15;
+            position: absolute;
+            font-size: 50vh;
+            bottom: -120px;
+            white-space: nowrap;
         }
         //   .first-image{
           
