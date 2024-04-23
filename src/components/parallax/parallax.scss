@@ -9,6 +9,7 @@
 
   h1 {
     font-size: 80px;
+    color: rgb(212, 234, 167);
     z-index: 3;
   }
 
@@ -20,6 +21,16 @@
     height: 100%;
     position: absolute;
     z-index: 4;
+  }
+  .stargate{
+    background-image: url('/stargate.svg');
+    background-size: cover;
+    background-position: top;
+    width: 10%;
+    height: 18%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
   }
   .planets {
     background-image: url("/planets.png");
