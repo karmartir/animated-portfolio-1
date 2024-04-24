@@ -46,7 +46,8 @@ const Hero = () => {
           className="textContainer"
           variants={textVariants}
           initial="initial"
-          animate="animate"
+          // animate="animate"
+          whileInView='animate'
         >
           <motion.h2 variants={textVariants}>
             GAREN <br /> MARTIROSYAN

@@ -30,7 +30,7 @@ const isInView = useInView(ref, {margin: '-100px'})
       variants={variants}
       initial="initial"
     //   animate="animate"
-        // whileInView='animate'
+        whileInView='animate'
         ref = {ref}
         animate={isInView && 'animate'}
     >
@@ -45,13 +45,13 @@ const isInView = useInView(ref, {margin: '-100px'})
         <div className="title">
           <img src="/office.jpg" alt="" />
           <h1>
-            <b>Unique</b> Ideas
+            <motion.b whileHover={{color: 'orange'}}>Unique</motion.b> Ideas
           </h1>
         </div>
 
         <div className="title">
           <h1>
-            <b>For Your</b> Business.
+            <motion.b whileHover={{color: 'orange'}}>For Your</motion.b> Business.
           </h1>
           <button>WHAT CAN I DO?</button>
         </div>
