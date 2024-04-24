@@ -1,17 +1,47 @@
+import { useRef } from "react";
 import "./services.scss";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const Services = () => {
+
+const ref = useRef()
+const isInView = useInView(ref, {margin: '-100px'})
+
+  const variants = {
+    initial: {
+      x: -500,
+      y: 100,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   return (
-    <motion.div className="services">
-      <motion.div className="textContainer">
+    <motion.div
+      className="services"
+      variants={variants}
+      initial="initial"
+    //   animate="animate"
+        // whileInView='animate'
+        ref = {ref}
+        animate={isInView && 'animate'}
+    >
+      <motion.div className="textContainer"  variants={variants}>
         <p>
           I focus on helping your brand grow
           <br /> and move forward
         </p>
         <hr />
       </motion.div>
-      <motion.div className="titleContainer">
+      <motion.div className="titleContainer"  variants={variants}>
         <div className="title">
           <img src="/office.jpg" alt="" />
           <h1>
@@ -26,8 +56,11 @@ const Services = () => {
           <button>WHAT CAN I DO?</button>
         </div>
       </motion.div>
-      <motion.div className="listContainer">
-        <div className="box">
+      <motion.div className="listContainer"  variants={variants}>
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
           <h2>Virtual</h2>
           <p>
             I possess strong skills in working virtually, utilizing
@@ -35,9 +68,12 @@ const Services = () => {
             with remote teams and deliver exceptional results.
           </p>
           <button>Go</button>
-        </div>
+        </motion.div>
 
-        <div className="box">
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
           <h2>Hybrid</h2>
           <p>
             I thrive in hybrid work environments, seamlessly transitioning
@@ -45,9 +81,12 @@ const Services = () => {
             maintain effective communication and collaboration.
           </p>
           <button>Go</button>
-        </div>
+        </motion.div>
 
-        <div className="box">
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
           <h2>In Person</h2>
           <p>
             When working in person, I leverage my interpersonal skills and
@@ -55,7 +94,7 @@ const Services = () => {
             to a positive and collaborative team atmosphere.
           </p>
           <button>Go</button>
-        </div>
+        </motion.div>
       </motion.div>
     </motion.div>
   );
