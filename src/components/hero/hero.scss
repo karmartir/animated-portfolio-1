@@ -12,8 +12,9 @@
     margin: auto;
 
     .textContainer {
-      width: 45%;
+      width: 40%;
       height: 100%;
+      padding: 40px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -37,7 +38,7 @@
         z-index: 55;
 
         @include mobile {
-        font-size: 36px;
+        font-size: 30px;
         }
       }
       .buttons {
