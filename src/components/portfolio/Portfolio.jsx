@@ -41,12 +41,17 @@ const Single = ({ item }) => {
   return (
     <section ref={ref}>
       <div className="container">
-        <img src={item.img} alt="item image" />
-        <motion.div className="textContainer" style={{ y }}>
-          <h2>{item.title}</h2>
-          <p>{item.desc}</p>
-          <button>See Demo</button>
-        </motion.div>
+        <div className="wrapper">
+          <div className="imgContainer">
+            <img src={item.img} alt="item image" />
+          </div>
+
+          <motion.div className="textContainer" >
+            <h2>{item.title}</h2>
+            <p>{item.desc}</p>
+            <button>See Demo</button>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
