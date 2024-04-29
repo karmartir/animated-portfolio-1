@@ -24,8 +24,8 @@ const itemVariants = {
   },
 };
 
-const Links = () => {
-  const items = ["Homepage", "Services", "Portfolio", "Contact", "About"];
+const Links = ({setOpen}) => {
+  const items = ["Homepage", "Services", "Portfolio", "Contact"];
 
   return (
     <motion.div className="links" variants={variants}>
@@ -37,7 +37,7 @@ const Links = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95, color: "red" }}
         >
-          {item}
+          <span onClick={() => setOpen(!open)}> {item}</span>
         </motion.a>
       ))}
     </motion.div>
