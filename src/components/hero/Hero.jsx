@@ -14,31 +14,40 @@ const textVariants = {
       staggerChildren: 0.1,
     },
   },
-  scrollButton:{
+  scrollButton: {
     opacity: 0,
     y: 10,
-    transition:{
-        duration: 2,
-        repeat: Infinity
-    }
-  }
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+    },
+  },
 };
 
 const sliderVariants = {
-    initial: {
-      x: 0
+  initial: {
+    x: 0,
+  },
+  animate: {
+    x: "-220%",
+    transition: {
+      repeat: Infinity,
+      repeatType: "mirror",
+      duration: 20,
     },
-    animate: {
-      x: '-220%',
-      transition: {
-        repeat: Infinity,
-        repeatType: 'mirror',
-        duration: 20,
-      },
-    },
-  };
+  },
+};
 
 const Hero = () => {
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
   return (
     <div className="hero">
       <div className="wrapper">
@@ -47,26 +56,40 @@ const Hero = () => {
           variants={textVariants}
           initial="initial"
           // animate="animate"
-          whileInView='animate'
+          whileInView="animate"
         >
           <motion.h2 variants={textVariants}>
             GAREN <br /> MARTIROSYAN
           </motion.h2>
           <motion.h1 variants={textVariants}>
-            Full stack developer 
+            Full stack developer
             <br /> and UI/UX designer
           </motion.h1>
           <motion.div className="buttons" variants={textVariants}>
-            <motion.button variants={textVariants}>
+            <motion.button variants={textVariants} onClick={() => scrollToSection('Portfolio')}>
               See the latest works
             </motion.button>
-            <motion.button variants={textVariants}>Contact me</motion.button>
+            <motion.button variants={textVariants} onClick={() => scrollToSection('Contact')}>
+             <a href={`#Contact`}>
+              Contact me
+             </a>
+            </motion.button>
           </motion.div>
-          <motion.img variants={textVariants} animate='scrollButton' src="/scroll.png" alt="" />
+          <motion.img
+            variants={textVariants}
+            animate="scrollButton"
+            src="/scroll.png"
+            alt=""
+          />
         </motion.div>
       </div>
 
-      <motion.div className="slidingTextContainer" variants={sliderVariants} initial='initial' animate='animate'>
+      <motion.div
+        className="slidingTextContainer"
+        variants={sliderVariants}
+        initial="initial"
+        animate="animate"
+      >
         Writer Content Creator Influencer
       </motion.div>
       <div className="imageContainer">

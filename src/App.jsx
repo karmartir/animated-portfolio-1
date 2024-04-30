@@ -14,10 +14,10 @@ const App = () => {
         <Hero/>
       </section>
 
-      <section id="Services"><Parallax type='services'/></section>
-      <section><Services/></section>
-      <section id='Portfolio'><Parallax type='portfolio'/></section>
-     <Portfolio/>
+      <section ><Parallax /></section>
+      <section id="Services"><Services type='services'/></section>
+      <section ><Parallax /></section>
+     <Portfolio type='Portfolio'/>
       <section id='Contact'><Contact/></section>
     </div>
   );
