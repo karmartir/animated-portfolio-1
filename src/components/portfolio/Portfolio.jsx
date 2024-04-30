@@ -13,7 +13,7 @@ const items = [
   {
     id: 2,
     title: "Project 2",
-    img: "./project_2.png",
+    img: "./project_2gym.png",
     desc: "The Fitness club demo",
     url: "https://gym-project-apr-24.netlify.app/" // Demo URL for Project 2
   },
@@ -56,15 +56,21 @@ const Single = ({ item }) => {
         <div className="wrapper">
           <div className="imgContainer" ref={ref}>
             <img src={item.img} alt="item image" />
+         
           </div>
 
           <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             {item.url && <button onClick={handleDemoClick}>See project</button>}
+     <hr />
+       
           </motion.div>
+     
         </div>
+
       </div>
+  
     </section>
   );
 };
@@ -89,8 +95,9 @@ const Portfolio = () => {
         <motion.div style={{ scaleX: scaleX }} className="progressBar"></motion.div>
       </div>
       {items.map((item) => (
-        <Single item={item} key={item.id} />
+        <Single item={item} key={item.id}   />
       ))}
+      
     </div>
   );
 };
