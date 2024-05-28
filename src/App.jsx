@@ -14,9 +14,9 @@ const App = () => {
         <Hero/>
       </section>
 
-      <section ><Parallax /></section>
-      <section id="Services"><Services type='services'/></section>
       <section ><Parallax type='services' /></section>
+      <section id="Services"><Services type='services'/></section>
+      <section ><Parallax /></section>
      <Portfolio type='Portfolio'/>
       <section id='Contact'><Contact/></section>
     </div>
