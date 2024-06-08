@@ -63,7 +63,7 @@ const Contact = () => {
         <motion.h1 variants={variants}>{`Let's work together`}</motion.h1>
         <motion.div variants={variants} className="item">
           <h2>Contact me:</h2>
-          <span>Please, use this contact form to send me a message =></span>
+          <span>Please, use this contact form to send me a message {"=>"}</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
