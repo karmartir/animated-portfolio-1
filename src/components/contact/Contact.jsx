@@ -60,18 +60,14 @@ const Contact = () => {
       whileInView="animate"
     >
       <motion.div className="textContainer" variants={variants}>
-        <motion.h1 variants={variants}>{`Let's work together`}</motion.h1>
+        <motion.h1 variants={variants}>{"Let's Work Together"}</motion.h1>
         <motion.div variants={variants} className="item">
-          <h2>Contact me:</h2>
-          <span>Please, use this contact form to send me a message {"=>"}</span>
+          <h2>Contact Me</h2>
+          <span>Please use this form to send me a message {"=>"}</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Address</h2>
-          <span>street number</span>
-        </motion.div>
-        <motion.div className="item" variants={variants}>
-          <h2>Phone</h2>
-          <span>+1(347)-345-1518</span>
+          <h2>Call or Leave a Message</h2>
+          <span>+1(732)-705-7071</span>
         </motion.div>
       </motion.div>
       <div className="formContainer">
@@ -115,11 +111,11 @@ const Contact = () => {
           <input type="email" required placeholder="Enter your email" name="email" />
           <textarea  rows="8" required placeholder="Write your message here" name="message" />
           { result.length !==0 
-        ? <span className="message">Status:{result}</span>
+        ? <span className="message">Status: {result}</span>
         : ''
     }
             <button type="submit" className="contact-submit">
-            Submit now
+            Send Message
           </button>
         </motion.form>
       </div>
