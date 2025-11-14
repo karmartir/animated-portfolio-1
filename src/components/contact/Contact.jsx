@@ -68,7 +68,7 @@ const Contact = () => {
         {/*<motion.div className="item" variants={variants}>
           <h2>Call or Leave a Message</h2>
           <span>+1(732)-705-7071</span>
-        </motion.div>*/
+        </motion.div>*/}
       </motion.div>
       <div className="formContainer">
         <motion.div
