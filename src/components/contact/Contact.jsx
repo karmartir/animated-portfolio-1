@@ -65,10 +65,10 @@ const Contact = () => {
           <h2>Contact Me</h2>
           <span>Please use this form to send me a message {"=>"}</span>
         </motion.div>
-        <motion.div className="item" variants={variants}>
+        {/*<motion.div className="item" variants={variants}>
           <h2>Call or Leave a Message</h2>
           <span>+1(732)-705-7071</span>
-        </motion.div>
+        </motion.div>*/
       </motion.div>
       <div className="formContainer">
         <motion.div
