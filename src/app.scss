@@ -55,3 +55,8 @@ section {
         @content;
     }
 }
+.container {
+  max-width: 1920px;   // adjust if you want narrower or wider
+  margin: 0 auto;      // centers the container
+  padding: 0 20px;     // adds spacing on mobile
+}
