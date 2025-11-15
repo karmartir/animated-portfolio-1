@@ -73,9 +73,9 @@ portfolio/
 
 ## Screenshots
 
-![Home Page](./public/screenshots/home.png)
-![Portfolio Page](./public/screenshots/portfolio.png)
-![Contact Page](./public/screenshots/contact.png)
+![Home Page](./screenshots/home.png)
+![Portfolio Page](./screenshots/portfolio.png)
+![Contact Page](./screenshots/contact.png)
 
 ## About Me
 
