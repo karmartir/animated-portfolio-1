@@ -52,8 +52,7 @@ npm run dev
 
 ```
 portfolio/
-├── public/
-│   └── screenshots/
+├── screenshots/
 │       ├── home.png
 │       ├── portfolio.png
 │       └── contact.png
